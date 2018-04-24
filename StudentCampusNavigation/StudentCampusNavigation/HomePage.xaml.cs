@@ -28,18 +28,19 @@ namespace StudentCampusNavigation
         {
             PagesList = new List<string>
             {
-                "Page 1",
-                "Page 2",
-                "Page 3"
+                "Map",
+                "Chat",
+                "Calendar"
             };
             TypesList = new List<Type>
             {
-                typeof(MainPage),
-                typeof(HomePage),
-                typeof(MainPage)
+                typeof(MapPage),
+                typeof(ChatPage),
+                typeof(CalendarPage)
             };
 
             this.InitializeComponent();
+            PageFrame.Navigate(TypesList[0]);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

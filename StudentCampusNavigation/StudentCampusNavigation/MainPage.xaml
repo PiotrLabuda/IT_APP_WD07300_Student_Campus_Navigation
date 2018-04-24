@@ -27,7 +27,7 @@
                     <ColumnDefinition Width="100"/>
                     <ColumnDefinition Width="100"/>
                 </Grid.ColumnDefinitions>
-                <Button Content="Sign In" HorizontalAlignment="Stretch" Margin="5"/>
+                <Button Content="Sign In" HorizontalAlignment="Stretch" Margin="5" Click="SignIn_Click"/>
                 <Button Content="Register" HorizontalAlignment="Stretch" Margin="5" Grid.Column="1"/>
             </Grid>
 
