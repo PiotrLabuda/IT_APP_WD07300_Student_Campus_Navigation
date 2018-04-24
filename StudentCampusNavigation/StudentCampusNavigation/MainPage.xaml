@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="StudentCampusNavigation.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StudentCampusNavigation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource FocusVisualBlackStrokeThemeBrush}">
+        <StackPanel Orientation="Vertical" RequestedTheme="Dark" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid Margin="0,0,0,50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>                    
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Student Campus Navigation"
+                           FontFamily="Bernard MT Condensed" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Padding="0,0,20,0" Foreground="#FFFF7700" FontSize="20"/>
+
+                <BitmapIcon UriSource="Assets/Map-Location-256.png" Width="Auto" Grid.Column="1" Height="80" Foreground="#FFFF7700"/>
+            </Grid>
+            <TextBlock Text="Please log in:" Margin="50,5,50,5"/>
+            <TextBox PlaceholderText="Username" Margin="50,5,50,5"/>
+            <PasswordBox PlaceholderText="Password" Margin="50, 5 ,50, 5"/>
+            <Grid HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Sign In" HorizontalAlignment="Stretch" Margin="5"/>
+                <Button Content="Register" HorizontalAlignment="Stretch" Margin="5" Grid.Column="1"/>
+            </Grid>
+
+            <Button Content="Forgot Password?" HorizontalAlignment="Center" Margin="5" Grid.Column="2"/>
+
+
+
+
+
+
+
+        </StackPanel>
+
+    </Grid>
+</Page>
