@@ -29,14 +29,12 @@ namespace StudentCampusNavigation
             PagesList = new List<string>
             {
                 "Map",
-                "Chat",
-                "Calendar"
+                "Chat"
             };
             TypesList = new List<Type>
             {
                 typeof(MapPage),
-                typeof(ChatPage),
-                typeof(CalendarPage)
+                typeof(ChatPage)
             };
 
             this.InitializeComponent();

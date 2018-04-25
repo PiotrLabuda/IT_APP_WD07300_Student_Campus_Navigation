@@ -119,6 +119,7 @@
     <None Include="StudentCampusNavigation_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\lord-of-the-rings-poster-rohan-gondor-map.jpg" />
     <Content Include="Assets\Map-Location-256.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
