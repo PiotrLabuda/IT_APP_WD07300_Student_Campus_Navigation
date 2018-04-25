@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,9 +23,25 @@ namespace StudentCampusNavigation
     /// </summary>
     public sealed partial class ChatPage : Page
     {
+        public ObservableCollection<string> MessagesList { get; set; }
         public ChatPage()
         {
+            MessagesList = new ObservableCollection<string>
+            {
+                "[Piotr] Where are the classes?",
+                "[Piotr] I overslept and will be late 10 mins",
+                "[Wiktoria] C-3, 299",
+                "[Wiktoria] Don't worry, nobody's here yet",
+                "[Piotr] Great. See you in a minute then"
+            };
             this.InitializeComponent();
+            OptionsBox.Items.Add("IT app.: Elect.media in Busi.");
+            OptionsBox.SelectedIndex = 0;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

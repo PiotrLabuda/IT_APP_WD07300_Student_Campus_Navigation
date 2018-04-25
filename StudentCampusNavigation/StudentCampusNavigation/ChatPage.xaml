@@ -4,10 +4,44 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:StudentCampusNavigation"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
     mc:Ignorable="d">
 
-    <Grid Background="Green">
+    <Grid>            
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+            <ItemsControl ItemsSource="{Binding MessagesList}"
+                                  IsTabStop="False" Grid.ColumnSpan="2">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                    <Border Background="DarkGray" HorizontalAlignment="Right" Height="40" Margin="5">
+                        <TextBlock Text="{Binding}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,10" />
+                    </Border>
+                </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        <TextBox Grid.ColumnSpan="2" Grid.Row="1"/>
+        <ComboBox Name="OptionsBox" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Width="400">
+
+        </ComboBox>
+        <Border Background="DarkGray" Grid.Column="1" Grid.Row="2">
+            <Button Content="Submit" Click="Button_Click"/>
+        </Border>
+
 
     </Grid>
+
 </Page>

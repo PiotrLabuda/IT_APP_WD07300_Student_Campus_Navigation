@@ -9,9 +9,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <SplitView Name="MainSplitView" DisplayMode="Inline" IsPaneOpen="True" Background="Black" PaneBackground="Black">
+        <SplitView Name="MainSplitView" DisplayMode="Inline" IsPaneOpen="True" Background="Black" PaneBackground="Black" OpenPaneLength="150">
             <SplitView.Pane>
-                <StackPanel Orientation="Vertical" Width="300" Background="DarkGray" Margin="-10">
+                <StackPanel Orientation="Vertical" Width="150" Background="DarkGray" Margin="-10">
                     <ItemsControl ItemsSource="{Binding PagesList}"
                                   IsTabStop="False">
                         <ItemsControl.ItemsPanel>
