@@ -5,9 +5,42 @@
     xmlns:local="using:StudentCampusNavigation"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
     mc:Ignorable="d">
 
-    <Grid Background="Red">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="50" Grid.Column="0"> 
+        <CalendarView SelectionMode="Single" IsGroupLabelVisible="False"
+        IsOutOfScopeEnabled="False" Language="en-GB"
+        CalendarIdentifier="GregorianCalendar" HorizontalAlignment="Right" SelectedDatesChanged="CalendarView_SelectedDatesChanged"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock Text="Events:" FontSize="40" Foreground="White"/>
+
+            <ItemsControl ItemsSource="{Binding Events}"
+                                  IsTabStop="False" Grid.ColumnSpan="2">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="DarkGray" HorizontalAlignment="Left" Height="40">
+                            <StackPanel Orientation="Horizontal">
+                                <Button Content = "Show on map" Click="Button_Click" Loaded="Button_Loaded"/> 
+                                <TextBlock Text="{Binding}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,10" Foreground="White"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+
 
     </Grid>
 </Page>
