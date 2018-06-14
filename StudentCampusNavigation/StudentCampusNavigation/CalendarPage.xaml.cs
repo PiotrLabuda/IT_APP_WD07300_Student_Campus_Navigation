@@ -40,7 +40,7 @@ namespace StudentCampusNavigation
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(MapPage));
         }
 
         private void Button_Loaded(object sender, RoutedEventArgs e)

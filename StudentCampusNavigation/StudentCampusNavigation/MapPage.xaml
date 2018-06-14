@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="Black">
-        <Image Source="Assets/lord-of-the-rings-poster-rohan-gondor-map.jpg" />
+        <WebView Source="https://www.google.pl/maps/place/C-3,+Janiszewskiego,+52-007+Wrocław/@51.1083679,17.0587341,17z/data=!4m8!1m2!2m1!1sC3+pwr!3m4!1s0x470fe82ab7f134fd:0x79ae35534ff0f50e!8m2!3d51.1089991!4d17.0599202"/>
 
     </Grid>
 </Page>
